@@ -3,9 +3,10 @@ class CreatePaymentMethods < ActiveRecord::Migration
     create_table :payment_methods do |t|
       t.string :name
       t.boolean :active
-      t.int :sortOrder
+      t.integer :sortOrder
+      t.references :payment
 
       t.timestamps
-    end
+    end    
   end
 end

@@ -11,19 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406044952) do
+ActiveRecord::Schema.define(:version => 20130406145320) do
 
   create_table "payment_categories", :force => true do |t|
     t.string   "name"
     t.boolean  "active"
     t.integer  "sortOrder"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "paymentCategoryLink_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
   create_table "payment_category_links", :force => true do |t|
-    t.integer  "paymentCategory_id"
     t.integer  "payment_id"
+    t.integer  "paymentCategory_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -35,17 +36,20 @@ ActiveRecord::Schema.define(:version => 20130406044952) do
     t.string   "name"
     t.boolean  "active"
     t.integer  "sortOrder"
+    t.integer  "payment_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "payments", :force => true do |t|
     t.decimal  "amount"
-    t.date     "purchaseDate"
     t.text     "description"
+    t.date     "purchaseDate"
+    t.boolean  "hasSalesTax"
     t.integer  "paymentMethod_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "paymentCategoryLink_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
   add_index "payments", ["paymentMethod_id"], :name => "index_payments_on_paymentMethod_id"

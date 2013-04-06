@@ -3,9 +3,11 @@
 one:
   name: MyString
   active: false
-  sortOrder: 
+  sortOrder: 1
+  payment: 
 
 two:
   name: MyString
   active: false
-  sortOrder: 
+  sortOrder: 1
+  payment: 

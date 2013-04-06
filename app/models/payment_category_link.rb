@@ -1,5 +1,5 @@
 class PaymentCategoryLink < ActiveRecord::Base
-  belongs_to :paymentCategory
   belongs_to :payment
-  attr_accessible :modified
+  belongs_to :paymentCategory
+  # attr_accessible :title, :body
 end

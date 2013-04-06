@@ -2,14 +2,16 @@
 
 one:
   amount: 9.99
-  purchaseDate: 2013-04-05
   description: MyText
-  modified: 2013-04-05
+  purchaseDate: 2013-04-06
+  hasSalesTax: false
   paymentMethod: 
+  paymentCategory: 
 
 two:
   amount: 9.99
-  purchaseDate: 2013-04-05
   description: MyText
-  modified: 2013-04-05
+  purchaseDate: 2013-04-06
+  hasSalesTax: false
   paymentMethod: 
+  paymentCategory: 
