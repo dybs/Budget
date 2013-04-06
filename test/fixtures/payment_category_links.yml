@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  modified: 2013-04-05 23:49:52
+  paymentCategory: 
+  payment: 
+
+two:
+  modified: 2013-04-05 23:49:52
+  paymentCategory: 
+  payment: 
