@@ -4,7 +4,6 @@ class CreatePaymentMethods < ActiveRecord::Migration
       t.string :name
       t.boolean :active
       t.integer :sortOrder
-      t.references :payment
 
       t.timestamps
     end    

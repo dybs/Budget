@@ -6,7 +6,6 @@ class CreatePayments < ActiveRecord::Migration
       t.date :purchaseDate
       t.boolean :hasSalesTax
       t.references :paymentMethod
-      t.references :paymentCategoryLink
 
       t.timestamps
     end

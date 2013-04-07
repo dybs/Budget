@@ -4,7 +4,6 @@ class CreatePaymentCategories < ActiveRecord::Migration
       t.string :name
       t.boolean :active
       t.integer :sortOrder
-      t.references :paymentCategoryLink
 
       t.timestamps
     end

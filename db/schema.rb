@@ -17,9 +17,8 @@ ActiveRecord::Schema.define(:version => 20130406145320) do
     t.string   "name"
     t.boolean  "active"
     t.integer  "sortOrder"
-    t.integer  "paymentCategoryLink_id"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "payment_category_links", :force => true do |t|
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20130406145320) do
     t.string   "name"
     t.boolean  "active"
     t.integer  "sortOrder"
-    t.integer  "payment_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -47,9 +45,8 @@ ActiveRecord::Schema.define(:version => 20130406145320) do
     t.date     "purchaseDate"
     t.boolean  "hasSalesTax"
     t.integer  "paymentMethod_id"
-    t.integer  "paymentCategoryLink_id"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   add_index "payments", ["paymentMethod_id"], :name => "index_payments_on_paymentMethod_id"
