@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 checking = PaymentMethod.create(name: 'Checking')
 credit = PaymentMethod.create(name: 'Credit Card')
+oldCredit = PaymentMethod.create(name: 'Old Credit Card', active: false)
 cash = PaymentMethod.create(name: 'Cash')
 
 creditCardBill = PaymentCategory.create(name: 'Credit Card Bill')
