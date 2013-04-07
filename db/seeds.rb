@@ -38,10 +38,11 @@ gasWork.paymentCategories = [gas]
 gasWork.paymentMethod = cash
 newPayments << gasWork
 
-# Pay credit card bill
-bill = Payment.create(amount: -50, purchaseDate: '30-Mar-2013', description: 'Pay restaurant purchase')
+# Pay credit card bill, should have today's date. 
+bill = Payment.create(amount: -50, description: 'Pay restaurant purchase')
 bill.paymentCategories = [creditCardBill]
 bill.paymentMethod = checking
+bill.hasSalesTax = false
 newPayments << bill
 
 newPayments.each {|p| p.save()}
