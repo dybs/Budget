@@ -1,0 +1,14 @@
+-#  This file is app/views/movies/index.html.haml
+%h1 Payment Methods
+%table#paymentMethods
+  %thead
+    %tr
+      %th Method Name        
+      %th Active      
+      %Th Sort Order
+  %tbody
+    - @paymentMethods.each do |pm|
+      %tr
+        %td= pm.name 
+        %td= check_box_tag("#{pm.name}_active", "", pm.active?)
+        %td= pm.sortOrder

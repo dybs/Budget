@@ -1,4 +1,10 @@
 Budget::Application.routes.draw do
+  get "payment_method/index"
+
+  get "payment_method/new"
+
+  get "payment_method/edit"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
