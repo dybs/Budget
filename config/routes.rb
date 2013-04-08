@@ -1,4 +1,10 @@
 Budget::Application.routes.draw do
+  get "payment_category/index"
+
+  get "payment_category/new"
+
+  get "payment_category/edit"
+
   get "payment_method/index"
 
   get "payment_method/new"

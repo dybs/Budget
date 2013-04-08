@@ -1,0 +1,2 @@
+module PaymentCategoryHelper
+end
