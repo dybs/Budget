@@ -1,2 +1,16 @@
-%h1 PaymentCategory#edit
-%p Find me in app/views/payment_category/edit.html.haml
+-# edit.html.haml using partial
+
+%h1 Edit Existing Payment Category
+
+= form_tag payment_category_path(@category), :method => :put do
+
+  = label :category, :name, 'Name'
+  = text_field :category, 'name'
+
+  = label :category, :active, "Active"
+  = check_box :category, :active
+
+  = label :category, :sortOrder, 'Sort Order'
+  = number_field :category, :sortOrder
+
+  = submit_tag 'Update Category Details'
