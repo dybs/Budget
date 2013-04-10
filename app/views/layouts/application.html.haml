@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Budget</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+!!! 5
+%html
+  %head
+    %title Budget
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
 
-<%= yield %>
+  %body
+    %h1.title Dybala Budget
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
 
-</body>
-</html>
+      = yield
