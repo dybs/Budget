@@ -1,2 +1,16 @@
-%h1 PaymentMethod#edit
-%p Find me in app/views/payment_method/edit.html.haml
+-# edit.html.haml using partial
+
+%h1 Edit Existing Payment Method
+
+= form_tag payment_method_path(@paymentMethod), :method => :put do
+
+  = label :paymentMethod, :name, 'Name'
+  = text_field :paymentMethod, 'name'
+
+  = label :paymentMethod, :active, "Active"
+  = check_box :paymentMethod, :active
+
+  = label :paymentMethod, :sortOrder, 'Sort Order'
+  = number_field :paymentMethod, :sortOrder
+
+  = submit_tag 'Update Method Details'
