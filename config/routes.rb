@@ -4,6 +4,8 @@ Budget::Application.routes.draw do
   
   resources :payment_method
 
+  resources :payments
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
