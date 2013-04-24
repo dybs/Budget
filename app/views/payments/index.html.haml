@@ -2,22 +2,26 @@
 
 %table
   %tr
+    %th ID
     %th Date    
     %th Category
     %th Amount
     %th Method
     %th Note
-    %th
-    %th
+    %th    
 
   - @payments.each do |payment|
     %tr
+      %td= link_to "#{payment.id}", edit_payment_path(payment)
       %td= payment.purchaseDate
-      %td      
+      %td
+        %table
+          - payment.paymentCategories.each do |cat|
+            %tr
+              %td= cat.name
       %td= payment.amount
       %td= payment.paymentMethod.name
-      %td= payment.description
-      %td= link_to 'Edit', edit_payment_path(payment)
+      %td= payment.description      
       %td= link_to 'Delete', payment, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
